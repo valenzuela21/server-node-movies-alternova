@@ -1,5 +1,7 @@
 const {request, response} = require("express");
 const Vote = require('../models/vote');
+const User = require('../models/user');
+
 const voteMovie = async (req = request, res = response) => {
         const newVote =  new Vote(req.body);
         try{
@@ -10,7 +12,11 @@ const voteMovie = async (req = request, res = response) => {
                 });
                 return false;
             }
-            await newVote.save();
+
+            const resultVote = await newVote.save();
+            const filter = { _id: req.body.user };
+            const update = { vote: resultVote._id };
+            await User.findOneAndUpdate(filter, update);
             res.json({msg: "Insert new vote success fully"})
         }catch (error){
             console.log(error);
@@ -29,8 +35,7 @@ const voteUpdateMovie = async (req = request, res = response, next) => {
             });
             return false;
         }
-        console.log(req.params.id);
-        console.log(req.body);
+
         let vote =  await Vote.findOneAndUpdate({_id: req.params.id}, req.body, {new: true});
 
         res.json({

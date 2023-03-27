@@ -17,6 +17,10 @@ const UserSchema = Schema({
     state:{
         type: Boolean,
         default: true,
+    },
+    vote:{
+        type: Schema.ObjectId,
+        ref: 'Vote'
     }
 });
 

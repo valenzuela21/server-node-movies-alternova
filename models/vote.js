@@ -1,7 +1,7 @@
 const {Schema, model} = require('mongoose');
 const VoteSchema = Schema({
     user:{
-       type: Schema.ObjectId,
+        type: Schema.ObjectId,
         ref: 'User'
     },
     score: [{
