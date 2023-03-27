@@ -281,13 +281,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDFmNjdhNzc3MThlODVhYWViYjEyMzkiLCJpYXQiOjE2Nzk4ODIyOTIsImV4cCI6MTY3OTg4OTQ5Mn0.2pQn_kbU8BtxhuC74h6qre0-agAhnasb3Xjb3oO504E",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDFmNjdhNzc3MThlODVhYWViYjEyMzkiLCJpYXQiOjE2Nzk5Mjc0OTIsImV4cCI6MTY3OTkzNDY5Mn0.M4hUDl1JFbv7U1QGyzGv-_CHIy48qc9QeC0HZAJ6Jl4",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"banner\": \"https://elanillounico.com/wp-content/gallery/el-hobbit-material-promocional-de-las-peliculas/logo_ehuvi.jpg\"\n}",
+							"raw": "{\n    \"banner\": \"https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/S/aplus-media/vc/137ab937-23da-4f5b-8650-c86ca91f562f.__CR0,0,970,300_PT0_SX970_V1___.jpg\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
