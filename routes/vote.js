@@ -1,10 +1,14 @@
 const {Router} = require('express');
-const {voteMovie, voteUpdateMovie} = require("../controllers/vote");
+const {voteMovie, voteUpdateMovie, getAllVotes} = require("../controllers/vote");
 const {validateJWT} = require("../middlewares");
 const {check} = require("express-validator");
 const {validateInputs} = require("../middlewares/validate-inputs");
 
 const router = Router();
+
+
+router.get('/all', [validateJWT], getAllVotes)
+
 
 router.post('/create', [validateJWT,
     check("user", "Insert id the input user").notEmpty().isMongoId().withMessage('Input user id not validate'),

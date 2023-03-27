@@ -49,7 +49,17 @@ const voteUpdateMovie = async (req = request, res = response, next) => {
     }
 }
 
+
+const getAllVotes = async (req = request, res = response, next) => {
+    let allVote = await Vote.find({});
+
+    res.json({
+        results: allVote
+    });
+}
+
 module.exports = {
     voteMovie,
-    voteUpdateMovie
+    voteUpdateMovie,
+    getAllVotes
 }
