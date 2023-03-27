@@ -14,7 +14,7 @@ router.post('/create', [validateJWT,
     validateInputs
 ], voteMovie);
 
-router.put('/add',[
+router.put('/add/:id',[
     validateJWT,
     check("user", "Insert id the input user").notEmpty().isMongoId().withMessage('Input user id not validate'),
     check("score", "Insert input score").notEmpty().isArray().withMessage('Input score is array object'),
