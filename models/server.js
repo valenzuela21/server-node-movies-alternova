@@ -19,6 +19,7 @@ class Server {
         this.authPath = '/api/auth';
         this.moviesPath = '/api/movies';
         this.searchPath = '/api/search';
+        this.votePath = '/api/vote';
         this.seedPath = '/api/seed';
 
         //Connect database
@@ -51,6 +52,7 @@ class Server {
         this.app.use(this.moviesPath, require('../routes/movies'));
         this.app.use(this.searchPath, require('../routes/search'));
         this.app.use(this.seedPath, require('../routes/seed'));
+        this.app.use(this.votePath, require('../routes/vote'));
     }
 
     sockets() {

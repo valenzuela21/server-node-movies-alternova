@@ -1,5 +1,4 @@
 const {response, request} = require('express');
-const mongoose = require('mongoose');
 const Movie = require('../models/movies');
 const getMoviesALL = async (req = request, res = response) => {
     const query = {visible: true};
@@ -19,6 +18,7 @@ const getMoviesDetail = async (req = request, res = response) => {
         movie
     });
 }
+
 
 
 const postMovie =  async(req = request, res = response) => {
