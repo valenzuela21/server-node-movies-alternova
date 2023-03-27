@@ -25,16 +25,29 @@ const insertUser = async (req, res = response) => {
     }
 }
 
+const userById =  async (req, res = response) => {
+    try{
+        const user =  await User.findById(req.params.id).populate('vote');
+        res.json({
+            user
+        })
+    }catch (error){
+        console.log(error);
+        return res.status(500).json({
+            msg: "Error consult user by id.",
+        })
+    }
+}
+
 const login = async (req, res = response) => {
     const {email, password} = req.body;
-
     try {
         const user = await User.findOne({email});
         //Check email exist
         if (!user) {
             return res.status(400).json({
                 msg: "User database no found."
-            })
+            });
         }
 
         // State User
@@ -76,5 +89,6 @@ const userAuth = async (req, res = response) => {
 module.exports = {
     login,
     insertUser,
-    userAuth
+    userAuth,
+    userById
 }

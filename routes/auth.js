@@ -1,5 +1,5 @@
 const {Router} = require('express');
-const {login, insertUser, userAuth} = require('../controllers/auth');
+const {login, insertUser, userAuth, userById} = require('../controllers/auth');
 const {validateJWT} = require('../middlewares');
 const {check} = require('express-validator');
 const {validateInputs} = require("../middlewares/validate-inputs");
@@ -18,6 +18,12 @@ router.post('/register', [
     check('password', 'the input password is required').isLength({min: 6}),
     validateInputs
     ],insertUser);
+
+router.get('/user/:id', [
+    validateJWT,
+    check('id', 'The input id is required').not().isEmpty().isMongoId(),
+    validateInputs
+],userById);
 
 router.get('/', validateJWT, userAuth)
 
