@@ -229,32 +229,6 @@
 					"response": []
 				},
 				{
-					"name": "voteMovie",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDFmNjdhNzc3MThlODVhYWViYjEyMzkiLCJpYXQiOjE2Nzk4MDg4MDAsImV4cCI6MTY3OTgxNjAwMH0.KeVI4xwTRs9WD-AvT8jWHmrDf7_Hx-yMzcXHLFxxQEo",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{url}}/api/movies/vote/641fd54dffc727e32218ffd4",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"api",
-								"movies",
-								"vote",
-								"641fd54dffc727e32218ffd4"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "findByID",
 					"request": {
 						"method": "GET",
@@ -320,7 +294,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDFmNjdhNzc3MThlODVhYWViYjEyMzkiLCJpYXQiOjE2Nzk4OTUwMTMsImV4cCI6MTY3OTkwMjIxM30.sYrWqUN1nPaA-a1qiyFd-wp6W3blOA3XExviWj0F9bk",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDFmNjdhNzc3MThlODVhYWViYjEyMzkiLCJpYXQiOjE2Nzk5MzAyNjksImV4cCI6MTY3OTkzNzQ2OX0.Bh3tJ7sTPIQGV29IHh4mQg37K_OQlkBBdNlJunFdHsA",
 								"type": "text"
 							}
 						],
