@@ -3,6 +3,13 @@ const Vote = require('../models/vote');
 const voteMovie = async (req = request, res = response) => {
         const newVote =  new Vote(req.body);
         try{
+            let userExist = await Vote.find({user: req.body.user});
+            if (userExist.length >= 1) {
+                res.status(401).json({
+                    msg: 'This user exists in the database'
+                });
+                return false;
+            }
             await newVote.save();
             res.json({msg: "Insert new vote success fully"})
         }catch (error){
