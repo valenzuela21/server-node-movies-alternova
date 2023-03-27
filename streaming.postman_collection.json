@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "c4c2fd17-ec36-49f4-ab62-8d69c149a3a9",
+		"name": "streaming",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13303453"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"123456\",\n    \"email\": \"vlzdavid12@outlook.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/auth",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"David Fernando Valenzuela Pardo\",\n    \"password\": \"123456\",\n    \"email\": \"vlzdavid12@outlook.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movies",
+			"item": [
+				{
+					"name": "filters",
+					"item": [
+						{
+							"name": "filterByName",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/search/name/shazam",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"search",
+										"name",
+										"shazam"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "filterByType",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/search/type/movie",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"search",
+										"type",
+										"movie"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "filterByAction",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/search/gender/action",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"search",
+										"gender",
+										"action"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDFmNjdhNzc3MThlODVhYWViYjEyMzkiLCJpYXQiOjE2Nzk3OTE5NDYsImV4cCI6MTY3OTc5OTE0Nn0.UaA4ILXz4vuYBncMXnZvRF1jydalOa7xfMYdlYBQ24A",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/movies",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDFmNjdhNzc3MThlODVhYWViYjEyMzkiLCJpYXQiOjE2Nzk3OTE5NDYsImV4cCI6MTY3OTc5OTE0Nn0.UaA4ILXz4vuYBncMXnZvRF1jydalOa7xfMYdlYBQ24A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"El Hombre Acero\",\n    \"type\": \"movie\",\n    \"gender\": \"action\",\n    \"visible\": true,\n    \"image\":\"https://www.themoviedb.org/t/p/original/5JW44QGgpEWx4aWXM0uVSi2xtrI.jpg\",\n    \"score\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/movies/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"movies",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "voteMovie",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDFmNjdhNzc3MThlODVhYWViYjEyMzkiLCJpYXQiOjE2Nzk4MDg4MDAsImV4cCI6MTY3OTgxNjAwMH0.KeVI4xwTRs9WD-AvT8jWHmrDf7_Hx-yMzcXHLFxxQEo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/movies/vote/641fd54dffc727e32218ffd4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"movies",
+								"vote",
+								"641fd54dffc727e32218ffd4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/movies/detail/6420c6d00189d938b8a1820b",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"movies",
+								"detail",
+								"6420c6d00189d938b8a1820b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bannerSocket",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDFmNjdhNzc3MThlODVhYWViYjEyMzkiLCJpYXQiOjE2Nzk4ODIyOTIsImV4cCI6MTY3OTg4OTQ5Mn0.2pQn_kbU8BtxhuC74h6qre0-agAhnasb3Xjb3oO504E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"banner\": \"https://elanillounico.com/wp-content/gallery/el-hobbit-material-promocional-de-las-peliculas/logo_ehuvi.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/movies/banner",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"movies",
+								"banner"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vote",
+			"item": [
+				{
+					"name": "addNewVote",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDFmNjdhNzc3MThlODVhYWViYjEyMzkiLCJpYXQiOjE2Nzk4OTUwMTMsImV4cCI6MTY3OTkwMjIxM30.sYrWqUN1nPaA-a1qiyFd-wp6W3blOA3XExviWj0F9bk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": \"641f67a77718e85aaebb1239\",\n    \"score\": [{\n        \"movie\": \"6420c6d00189d938b8a18208\",\n        \"vote\": 3\n    }]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/vote/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vote",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateNewVote",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDFmNjdhNzc3MThlODVhYWViYjEyMzkiLCJpYXQiOjE2Nzk4OTczOTcsImV4cCI6MTY3OTkwNDU5N30.xbQhektVwBtWyzx4cZjP5uCL3WjAtvwgs1GpAV1k07g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": \"64212c2f2a3942d585d8be9d\",\n    \"score\": [{\n        \"movie\": \"6420c6d00189d938b8a18208\",\n        \"vote\": 3\n    },{\n        \"movie\": \"6420c6d00189d938b8a1820b\",\n        \"vote\": 3\n    }]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/vote/add/64212c2f2a3942d585d8be9d",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vote",
+								"add",
+								"64212c2f2a3942d585d8be9d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create Seed",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/seed",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"seed"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
