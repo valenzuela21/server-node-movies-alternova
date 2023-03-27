@@ -24,11 +24,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/auth",
+							"raw": "{{url}}/api/auth",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"auth"
@@ -44,7 +43,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"David Fernando Valenzuela Pardo\",\n    \"password\": \"123456\",\n    \"email\": \"vlzdavid12@outlook.com\"\n}",
+							"raw": "{\n    \"namefull\": \"David Fernando Valenzuela Pardo\",\n    \"password\": \"123456\",\n    \"email\": \"vlzdavid12@outlook.com\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -52,11 +51,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/auth/register",
+							"raw": "{{url}}/api/auth/register",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"auth",
@@ -92,11 +90,10 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/search/name/shazam",
+									"raw": "{{url}}/api/search/name/shazam",
 									"host": [
-										"localhost"
+										"{{url}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"search",
@@ -125,11 +122,10 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/search/type/movie",
+									"raw": "{{url}}/api/search/type/movie",
 									"host": [
-										"localhost"
+										"{{url}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"search",
@@ -158,11 +154,10 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/api/search/gender/action",
+									"raw": "{{url}}/api/search/gender/action",
 									"host": [
-										"localhost"
+										"{{url}}"
 									],
-									"port": "8080",
 									"path": [
 										"api",
 										"search",
@@ -187,11 +182,10 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:8080/api/movies",
+							"raw": "{{url}}/api/movies",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"movies"
@@ -221,11 +215,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/movies/create",
+							"raw": "{{url}}/api/movies/create",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"movies",
@@ -247,11 +240,10 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:8080/api/movies/vote/641fd54dffc727e32218ffd4",
+							"raw": "{{url}}/api/movies/vote/641fd54dffc727e32218ffd4",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"movies",
@@ -268,11 +260,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/movies/detail/6420c6d00189d938b8a1820b",
+							"raw": "{{url}}/api/movies/detail/6420c6d00189d938b8a1820b",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"movies",
@@ -304,11 +295,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/movies/banner",
+							"raw": "{{url}}/api/movies/banner",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"movies",
@@ -344,11 +334,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/vote/create",
+							"raw": "{{url}}/api/vote/create",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"vote",
@@ -379,11 +368,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/vote/add/64212c2f2a3942d585d8be9d",
+							"raw": "{{url}}/api/vote/add/64212c2f2a3942d585d8be9d",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"vote",
@@ -402,11 +390,10 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/seed",
+					"raw": "{{url}}/api/seed",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"seed"
