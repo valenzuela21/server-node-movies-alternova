@@ -63,6 +63,32 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "userId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDFmNjdhNzc3MThlODVhYWViYjEyMzkiLCJpYXQiOjE2Nzk5MzAyNjksImV4cCI6MTY3OTkzNzQ2OX0.Bh3tJ7sTPIQGV29IHh4mQg37K_OQlkBBdNlJunFdHsA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/auth/user/641f67a77718e85aaebb1239",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"user",
+								"641f67a77718e85aaebb1239"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -351,6 +377,31 @@
 								"vote",
 								"add",
 								"64212c2f2a3942d585d8be9d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AllVote",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDFmNjdhNzc3MThlODVhYWViYjEyMzkiLCJpYXQiOjE2Nzk5NDYwNDQsImV4cCI6MTY3OTk1MzI0NH0.cDGb6VMV0nP_fHIOzAkiJ9sCbGmDTyrq9iHdekyaJ_8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/vote/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vote",
+								"all"
 							]
 						}
 					},
